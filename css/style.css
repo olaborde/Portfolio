@@ -11,6 +11,7 @@ h3,
 h4,
 h5,
 h6,
+p,
 a {
     font-family: "Raleway";
 }
@@ -129,7 +130,7 @@ a {
 }
 
 .about .desc h3 {
-    color: #10828C;
+    color: #4d648d;
 }
 
 .about .desc p {

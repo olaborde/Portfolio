@@ -11,10 +11,24 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   </head>
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+   
+    <div class="resume">
+        <button class="btn btn-outline-secondary btn-lg" onclick="closeNav()">Close</button>
+        
+        <script src="https://gist.github.com/olaborde/b05015fc524a0e579c696f3828b64c42.js"></script>
+
+    </div>
+
+
+</div>
 <body>
+
+
 <!-- navbar -->
 <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light ">
-    <a class="navbar-brand" href="#">Home</a>
+    <a class="navbar-brand" href="index.html">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -33,14 +47,16 @@
     </div>
 </nav>
 
+
+
   <header class="header">
     <div class="overlay"></div>
     <div class="containter">
         <div class="description ">
-            <h1> Hello, Welcome To My portfolio Website
+            <h1> Hello, Welcome To My portfolio Website</h1>
                 <p>
                 </p>
-                <button class="btn btn-outline-secondary btn-lg">See more</button> </h1>
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()"><button class="btn btn-outline-secondary btn-lg">View Resume</button></span>
         </div>
 
     </div>
@@ -117,29 +133,39 @@
     <!-- Contact form -->
     <div class="contact-form" id="contact">
         <div class="container">
-            <form>
+            <form action="secure_email_code.php" id="form" method="post" name="form">
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-12">
                         <h1>Get in Touch</h1>
                     </div>
                     <div class="col-lg-8 col-md-8 col-sm-12 right">
                         <div class="form-group">
-                            <input type="text" class="form-control form-control-lg" placeholder="Your Name" name="name">
+                            <label for="name">Name:</label>
+                            <input type="text" class="form-control form-control-lg" placeholder="Your Name" id="name" name="vname">
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control form-control-lg" placeholder="YourEmail@email.com" name="email">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control form-control-lg" placeholder="YourEmail@email.com" id="email" name="vemail">
                         </div>
+
                         <div class="form-group">
-                            <textarea class="form-control form-control-lg">
-    
-             </textarea>
+                            <label for="sub">Subject:</label>
+                            <input type="sub" class="form-control form-control-lg" placeholder="YourEmail@email.com" id="sub" name="sub">
+                        </div>    
+
+                        <div class="form-group">
+                            <label for="comments">Comments:</label>
+                            <textarea class="form-control form-control-lg" id="comments">
+            
+                            </textarea>
                         </div>
-                        <input type="submit" class="btn btn-secondary btn-block" value="Send" name="">
+                        <a href="secure_email_code.php"><input type="submit" class="btn btn-secondary btn-block" value="Send Comments" id="send" name="submit"></a>
                     </div>
                 </div>
             </form>
         </div>
     </div>
+
 
 
 
